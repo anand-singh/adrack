@@ -1,5 +1,4 @@
-package com.adrack
-package adrack
+package com.adrack.repo
 
 final class ExampleSuite extends TestSuite {
   test("hello world") {

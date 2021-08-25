@@ -1,5 +1,4 @@
-package com.adrack
-package adrack
+package com.adrack.api
 
 object Main extends App {
   println("─" * 100)

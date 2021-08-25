@@ -1,5 +1,4 @@
-package com.adrack
-package adrack
+package com.adrack.repo
 
 import org.scalacheck.ScalacheckShapeless
 import org.scalatest._

@@ -3,12 +3,42 @@ import Dependencies._
 ThisBuild / organization := "com.adrack"
 ThisBuild / scalaVersion := "2.13.6"
 
+// -------------------------------------------------------------------------------------------------------------------
+// Root Project
+// -------------------------------------------------------------------------------------------------------------------
 lazy val `adrack` =
   project
     .in(file("."))
     .settings(name := "adrack")
-    .settings(commonSettings)
-    .settings(dependencies)
+    .aggregate(`ad-core`, `ad-repo`, `ad-api`)
+    .dependsOn(`ad-core`, `ad-repo`, `ad-api`)
+
+// -------------------------------------------------------------------------------------------------------------------
+// Core Module
+// -------------------------------------------------------------------------------------------------------------------
+lazy val `ad-core` = project
+  .in(file("modules/ad-core"))
+  .settings(name := "modules/ad-core")
+  .settings(commonSettings)
+  .settings(dependencies)
+
+// -------------------------------------------------------------------------------------------------------------------
+// Repo Module
+// -------------------------------------------------------------------------------------------------------------------
+lazy val `ad-repo` = project
+  .in(file("modules/ad-repo"))
+  .settings(name := "modules/ad-repo")
+  .settings(commonSettings)
+  .settings(dependencies)
+
+// -------------------------------------------------------------------------------------------------------------------
+// API Module
+// -------------------------------------------------------------------------------------------------------------------
+lazy val `ad-api` = project
+  .in(file("modules/ad-api"))
+  .settings(name := "modules/ad-api")
+  .settings(commonSettings)
+  .settings(dependencies)
 
 lazy val commonSettings =
   compilerPlugins ++ commonScalacOptions ++ Seq(
