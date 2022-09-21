@@ -4,7 +4,7 @@ ThisBuild / autoStartServer := false
 
 update / evictionWarningOptions := EvictionWarningOptions.empty
 
-addSbtPlugin("ch.epfl.scala" % "sbt-scalafix" % "0.10.2")
+addSbtPlugin("ch.epfl.scala" % "sbt-scalafix" % "0.10.3")
 addSbtPlugin("com.timushev.sbt" % "sbt-rewarn" % "0.1.3")
 addSbtPlugin("com.timushev.sbt" % "sbt-updates" % "0.6.3")
 addSbtPlugin("com.github.sbt" % "sbt-git" % "2.0.0")
