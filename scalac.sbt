@@ -34,6 +34,7 @@ ThisBuild / shouldLint :=
 ThisBuild / wartremoverWarnings := {
   if (shouldLint.value)
     Warts.allBut(
+      Wart.ScalaApp,
       Wart.ImplicitConversion,
       Wart.ImplicitParameter,
     )
