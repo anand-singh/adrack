@@ -1,7 +1,7 @@
 import Dependencies._
 
 ThisBuild / organization := "com.adrack"
-ThisBuild / scalaVersion := "2.13.9"
+ThisBuild / scalaVersion := "2.13.10"
 
 // -------------------------------------------------------------------------------------------------------------------
 // Root Project
